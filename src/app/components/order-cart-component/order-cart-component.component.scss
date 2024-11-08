@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;1,300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto Mono", sans-serif;
+  color: #252525;
+  background-color: #f7f2e9;
+  padding: 3.2rem;
+  padding-bottom: 6rem;
+}
+
+.container {
+  max-width: 80rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4.8rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.header h1 {
+  color: #edc84b;
+  text-transform: uppercase;
+  font-size: 5.2rem;
+  font-weight: 300;
+  letter-spacing: 3px;
+  text-align: center;
+}
+
+.cart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+  width: 100%;
+}
+
+.cart-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.2rem;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 1.6rem;
+}
+
+.cart-item img {
+  width: 12rem;
+  aspect-ratio: 1;
+}
+
+.cart-item-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.cart-item-info h3 {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.cart-item-info p {
+  font-size: 1.4rem;
+  font-weight: 300;
+  font-style: italic;
+  color: #666;
+}
+
+.cart-item-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.6rem;
+  margin-top: 1rem;
+}
+
+.price {
+  font-size: 1.6rem;
+  color: #252525;
+  font-weight: 500;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.quantity-controls button {
+  font-size: 1.6rem;
+  padding: 0.4rem 1rem;
+  background-color: #edc84b;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.quantity-controls span {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.remove-btn {
+  background-color: #edc84b;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  font-size: 1.4rem;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.remove-btn:hover {
+  background-color: #e9bb24;
+}
+
+.empty-cart p {
+  font-size: 1.5rem;
+  text-align: center;
+  color: #888;
+}
+
+.checkout-summary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.6rem;
+}
+
+.checkout-summary p {
+  font-size: 1.6rem;
+}
+
+.checkout-btn {
+  font-size: 1.6rem;
+  font-weight: bold;
+  padding: 1.4rem 3.2rem;
+  background-color: #edc84b;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.checkout-btn:hover:enabled {
+  background-color: #e9bb24;
+}
+
+.checkout-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+.icon-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-icon {
+  font-size: 2.4rem;
+  color: #252525;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.dropdown-icon:hover {
+  color: #edc84b;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #f7f2e9;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 1rem;
+  min-width: 160px;
+  z-index: 1;
+}
+
+.icon-dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.option-button {
+  display: block;
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: white;
+  background-color: #edc84b;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: left;
+  transition: background-color 0.3s;
+  margin-bottom: 0.5rem;
+  text-decoration: none;
+}
+
+.option-button:hover {
+  background-color: #e9bb24;
+}

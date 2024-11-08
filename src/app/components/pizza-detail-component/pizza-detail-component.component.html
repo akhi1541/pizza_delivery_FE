@@ -1,0 +1,31 @@
+<div class="container">
+    <header class="header">
+      <h1>Pizza Details</h1>
+      <button class="cart-button" [routerLink]="['/cart']">Cart</button>
+    </header>
+  
+    <main class="pizza-detail">
+      <div class="image">
+        <img [src]="'assets/' + pizza.imageUrl" [alt]="pizza.name" />
+      </div>
+      <div class="data">
+        <h2>{{ pizza.name }}</h2>
+        <h4>{{ pizza.description }}</h4>
+        <span class="price-size">{{ pizza.price | currency:'INR' }} - {{ pizza.size }}</span>
+  
+        <div *ngIf="quantity === 0">
+          <button class="btn" (click)="updateCart(pizza)">Add to cart</button>
+        </div>
+  
+        <div *ngIf="showQuantityControls">
+          <div class="qty-controls">
+            <button (click)="decreaseQuantity(pizza)">-</button>
+            <span>{{ quantity }}</span>
+            <button (click)="updateCart(pizza)">+</button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  
+  

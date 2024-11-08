@@ -1,0 +1,30 @@
+<div class="container">
+  <header class="header">
+    <h1>Order History</h1>
+  </header>
+
+  <main class="order-history">
+    <h2>Your Past Orders</h2>
+
+    <ul class="orders">
+      <li *ngFor="let order of orderHistory" class="order-item">
+        <div>
+          <small>Order #{{ order.orderId }}</small>
+          <img src="" alt="" />
+          <p>Total Price: {{ order.totalPrice | currency : "INR" }}</p>
+          <p>Delivery Address: {{ order.deliveryAddress }}</p>
+          <h3>Items:</h3>
+          <ul class="order-items">
+            <li *ngFor="let item of order.pizzaItems" class="order-pizza-item">
+              <span>{{ item.name }} - Quantity: {{ item.quantity }}</span>
+            </li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </main>
+
+  <footer class="footer">
+    <p>Thank you for choosing Akhil Pizza Co.!</p>
+  </footer>
+</div>

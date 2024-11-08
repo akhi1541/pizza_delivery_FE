@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;1,300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto Mono", sans-serif;
+  color: #252525;
+  font-weight: 400;
+  background-color: #f7f2e9;
+  border-bottom: 1.6rem solid #edc84b;
+  min-height: 100vh;
+  padding: 3.2rem;
+  padding-bottom: 6rem;
+}
+
+.container {
+  max-width: 80rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4.8rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-self: stretch;
+}
+
+.header h1 {
+  color: #edc84b;
+  text-transform: uppercase;
+  // font-size: 5.2rem;
+  font-size: 2.2rem;
+  font-weight: 300;
+  letter-spacing: 3px;
+  position: relative;
+  display: inline-block;
+  padding: 1rem 0;
+  border-top: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+}
+
+.cart-button {
+  padding: 0.5rem 1rem;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: white;
+  background-color: #edc84b;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cart-button:hover {
+  background-color: #e9bb24;
+}
+
+.pizza-detail {
+  display: flex;
+  gap: 3.2rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.image img {
+  width: 32rem;
+  aspect-ratio: 1;
+}
+
+.data {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.data h2 {
+  font-size: 3.2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.data h4 {
+  font-size: 1.8rem;
+  font-weight: 300;
+  font-style: italic;
+  color: #555;
+}
+
+.price-size {
+  font-size: 2rem;
+  font-weight: 400;
+  color: green;
+}
+
+.btn {
+  color: inherit;
+  font-family: inherit;
+  border: none;
+  font-size: 1.6rem;
+  font-weight: 500;
+  background-color: #edc84b;
+  padding: 1.4rem 3.2rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn:hover {
+  background-color: #e9bb24;
+}
+
+.qty-controls {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.qty-controls button {
+  padding: 0.5rem 1rem;
+  font-size: 1.6rem;
+  border: 1px solid #edc84b;
+  background-color: #f7f2e9;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.qty-controls button:hover {
+  background-color: #edc84b;
+  color: white;
+}
+
+.qty-controls span {
+  font-size: 1.6rem;
+  font-weight: bold;
+}

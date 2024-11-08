@@ -1,0 +1,40 @@
+
+<div class="container">
+  <header class="header">
+    <h1>Akhil Pizza Co.</h1>
+    <div class="icon-dropdown">
+      <span class="fas fa-user-circle dropdown-icon">🔽</span>
+      <div class="dropdown-menu">
+        <button class="option-button" [routerLink]="['/cart']">Cart</button>
+        <button class="option-button" (click)="logout()">Logout</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="menu">
+    <h2>Our menu</h2>
+
+    <p>
+      Authentic Italian cuisine. 6 creative dishes to choose from. All from our
+      stone oven, all organic, all delicious.
+    </p>
+
+    <ul class="pizzas">
+      <li
+        *ngFor="let pizza of pizzas"
+        class="pizza"
+        [routerLink]="['/pizza', pizza._id]"
+      >
+        <img [src]="'assets/' + pizza.imageUrl" [alt]="pizza.name" />
+        <div>
+          <h3>{{ pizza.name }}</h3>
+          <p>{{ pizza.description }}</p>
+        </div>
+      </li>
+    </ul>
+  </main>
+
+  <footer class="footer">
+    <p>We're happy to welcome you between 12:00 and 22:00.</p>
+  </footer>
+</div>

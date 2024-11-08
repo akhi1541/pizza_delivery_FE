@@ -1,0 +1,53 @@
+<div class="container">
+  <header class="header">
+    <h1>Your Cart</h1>
+    <div class="icon-dropdown">
+      <span class="fas fa-user-circle dropdown-icon">🔽</span>
+      <div class="dropdown-menu">
+        <button class="option-button" [routerLink]="['/orders']">Orders</button>
+      </div>
+    </div>
+  </header>
+  
+  <main class="cart">
+    <ul class="cart-items">
+      <li *ngFor="let item of cartItems" class="cart-item">
+        <img [src]="'assets/' + item.pizzaDetails.imageUrl" [alt]="item.pizzaDetails.name" />
+        <div class="cart-item-info">
+          <h3>{{ item.pizzaDetails.name }}</h3>
+          <p>{{ item.pizzaDetails.description }}</p>
+          <div class="cart-item-actions">
+            <span class="price">{{ item.pizzaDetails.price | currency:'INR' }}</span>
+            <div class="quantity-controls">
+              <button (click)="decreaseQuantity(item)">-</button>
+              <span>{{ item.Qty }}</span>
+              <button (click)="updateCart(item)">+</button>
+            </div>
+            <button (click)="removePizza(item)" class="remove-btn" >
+              Remove
+            </button>
+          </div>
+        </div>
+      </li>
+    </ul>
+
+    <div *ngIf="cartItems.length === 0" class="empty-cart">
+      <p>Your cart is empty. Add items to your cart from the menu.</p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="checkout-summary">
+      <p>
+        Total Price: <span>{{ totalPrice | currency: 'INR' }}</span>
+      </p>
+      <button
+        class="checkout-btn"
+        [disabled]="cartItems.length === 0"
+        (click)="checkout()"
+      >
+        Checkout
+      </button>
+    </div>
+  </footer>
+</div>
